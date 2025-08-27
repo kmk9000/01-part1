@@ -1,3 +1,5 @@
+import React from "react";
+
 const Hello = (props) => {
   console.log(props);
   return (
@@ -9,8 +11,8 @@ const Hello = (props) => {
   );
 };
 
-const App = () => {
-  const now = newDate();
+const HelloComponent = () => {
+  const now = new Date();
   const a = 10;
   const b = 20;
   console.log(now, a + b);
@@ -23,6 +25,9 @@ const App = () => {
       </p>
     </>
   );
+};
+
+const Name = () => {
   const name = "Pekka";
   const age = 10;
 
@@ -31,7 +36,15 @@ const App = () => {
       <h1>Greetings</h1>
       <Hello name="Maya" age={26 + 10} />
       <Hello name={name} age={age} />
-      <Footer />
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <>
+      <HelloComponent />
+      <Name />
     </>
   );
 };
